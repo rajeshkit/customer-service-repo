@@ -20,6 +20,7 @@ pipeline {
                 bat 'docker container rm -f customer-service-container'
                 bat 'docker run --name customer-service-container --network customer-mysql-network -itd -p 8181:9001 9894851315/customer-service'
                 bat 'docker run -d --name mysqldbcontainer --network customer-mysql-network -e MYSQL_DATABASE=customerdb -e MYSQL_ROOT_PASSWORD=root@123 mysql'
+              
                 echo 'docker container is created'
             }
         }
