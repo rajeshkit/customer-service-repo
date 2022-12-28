@@ -18,7 +18,7 @@ pipeline {
         stage('docker deploy'){
             steps{
                 bat 'docker container rm -f customer-service-container'
-                bat 'docker run --name customer-service-container --network customerservicenetwork -itd -p 8282:9001 9894851315/customerservicenetr-service'
+                bat 'docker run --name customer-service-container --network customerservicenetwork -itd -p 8282:9001 9894851315/customer-service'
                 echo 'docker container is created'
                 echo 'docker container is running'
             }
